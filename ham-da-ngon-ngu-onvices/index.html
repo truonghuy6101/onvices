@@ -26,30 +26,30 @@
                 <article>
                     <h2 class="my-3">Hàm hỗ trợ đa ngôn ngữ cho website</h2>
                     
-                    <p><code>function translate($text,$from,$to){
-    $url = "http://translate.google.com/translate_a/single?client=gtx&dt=t&ie=UTF-8&oe=UTF-8&sl=$from&tl=$to&q=". urlencode($text);
-    set_time_limit(0);
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-    curl_setopt($ch, CURLOPT_HEADER, false);
+                    <p><code>function translate($text,$from,$to){</br>  
+    $url = "http://translate.google.com/translate_a/single?client=gtx&dt=t&ie=UTF-8&oe=UTF-8&sl=$from&tl=$to&q=". urlencode($text);</br>  
+    set_time_limit(0);</br>  
+    $ch = curl_init();</br>  
+    curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);</br>  
+    curl_setopt($ch, CURLOPT_HEADER, false);</br>  
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_MAXREDIRS,20);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 40);
-    curl_setopt($ch, CURLOPT_URL, $url);
-    $result = curl_exec($ch);
-    curl_close($ch);
-        $result = json_decode($result);
-    if(!empty($result)){
-    foreach($result[0] as $k){
-        $v[] = $k[0];
-    }
-    return implode(" ", $v);
-    }
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);</br>  
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);</br>  
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);</br>  
+    curl_setopt($ch, CURLOPT_MAXREDIRS,20);</br>  
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 40);</br>  
+    curl_setopt($ch, CURLOPT_URL, $url);</br>  
+    $result = curl_exec($ch);</br>  
+    curl_close($ch);</br>  
+        $result = json_decode($result);</br>  
+    if(!empty($result)){</br>  
+    foreach($result[0] as $k){</br>  
+        $v[] = $k[0];</br>  
+    }</br>  
+    return implode(" ", $v);</br> 
+    }</br> 
 } </code>
-                   Nếu sử dụng bạn có thể đặt tên riêng cho mình.
-                        Gọi hàm và sử dụng 
+                </br> Nếu sử dụng bạn có thể đặt tên riêng cho mình.
+                </br> Gọi hàm rồi sử dụng, giải thích nhiều nhứt đầu
                         
  </p>
