@@ -6,6 +6,12 @@
     <title>OVCS Technology - Onvices </title>
     <!-- MDBootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet">
+<style>code {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+} </style>
 </head>
 <body>
     <!-- Main Content -->
@@ -18,8 +24,8 @@
 ​
                 </hr><!-- Main Article -->
                 <article>
-                    <h2 class="my-3">Tiêu đề bài báo</h2>
-                    <p>Ngày đăng: 09/08/2024</p>
+                    <h2 class="my-3">Hàm hỗ trợ đa ngôn ngữ cho website</h2>
+                    
                     <p><code>function translate($text,$from,$to){
     $url = "http://translate.google.com/translate_a/single?client=gtx&dt=t&ie=UTF-8&oe=UTF-8&sl=$from&tl=$to&q=". urlencode($text);
     set_time_limit(0);
@@ -42,19 +48,8 @@
     }
     return implode(" ", $v);
     }
-}
-function __($content) {
-    $from = "vi";
-    if (isset($_COOKIE['language'])) {
-        $to = $_COOKIE['language'];
-        $translate = translate($content, $from, $to);
-        if ($translate) {
-            $lang = $translate;
-        }
-        return $lang;
-    } else {
-        return $content;
-    }
 } </code>
-                      
+                   Nếu sử dụng bạn có thể đặt tên riêng cho mình.
+                        Gọi hàm và sử dụng 
+                        
  </p>
